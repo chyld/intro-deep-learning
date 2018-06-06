@@ -1,0 +1,9 @@
+source activate tensorflow_p36
+jupyter lab --ip 0.0.0.0
+
+--------------------------------------------------------------
+### get a list of available GPUs
+from tensorflow.python.client import device_lib
+for d in device_lib.list_local_devices():
+    print(d.name, d.physical_device_desc)
+--------------------------------------------------------------
